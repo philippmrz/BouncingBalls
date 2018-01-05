@@ -43,9 +43,6 @@ class Ball {
     canvas.height = canvas.clientHeight;
 
     $.lineWidth = 6;
-    $.lineCap = 'butt';
-
-    canvas.style.border = '2px solid red';
   }
 
   function initBalls() {
