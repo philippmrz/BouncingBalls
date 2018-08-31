@@ -1,6 +1,6 @@
 class Ball {
-  constructor(radius) {
-    this.radius = radius;
+  constructor() {
+    this.radius = Math.random() * 20;
     this.x = Math.random() * (document.querySelector('canvas').width - this.radius);
     this.x = (this.x < this.radius) ? this.x + this.radius : this.x;
     this.y = Math.random() * (document.querySelector('canvas').height - this.radius);
@@ -15,10 +15,6 @@ class Ball {
     if (this.y > document.querySelector('canvas').height - this.radius || this.y < 0 + this.radius) this.dy = -this.dy;
     this.x += this.dx;
     this.y += this.dy;
-  }
-
-  static get Radius() {
-    return Math.random() * 20;
   }
 
   static genColor() {
@@ -47,7 +43,7 @@ class Ball {
 
   function initBalls() {
     for (let i = 0; i < 700; i++){
-      ballsArray[i] = new Ball(Ball.Radius);
+      ballsArray[i] = new Ball();
     }
   }
 
